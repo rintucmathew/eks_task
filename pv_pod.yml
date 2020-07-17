@@ -11,11 +11,11 @@ spec:
         claimName: pv-claim
   containers:
     - name: task-pv-container
-      image: laxmanch341/jenkins:v2
+      image: rintucmathew/httpd
       ports:
         - containerPort: 8080
-          name: "jenkins-server"
+          name: "Appache-server"
       volumeMounts:
-        - mountPath: "/var/lib/jenkins"
+        - mountPath: "/var/www/html/"
                                        
           name: pv-storage
